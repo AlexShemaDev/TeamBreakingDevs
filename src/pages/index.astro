@@ -1,0 +1,911 @@
+---
+import Layout from '../layouts/Layout.astro';
+---
+
+<Layout title="Say My Name — Adiós, compañero">
+
+  <!-- Smoke particles background -->
+  <div class="smoke-container" aria-hidden="true">
+    {Array.from({ length: 20 }).map((_) => (
+      <div class="smoke-particle" style={`--delay: ${Math.random() * 8}s; --x: ${Math.random() * 100}%; --size: ${30 + Math.random() * 80}px; --duration: ${6 + Math.random() * 8}s;`}></div>
+    ))}
+  </div>
+
+  <!-- Hero -->
+  <section class="hero">
+    <div class="hero-badge">TEMPORADA FINAL</div>
+
+    <div class="formula-container">
+      <span class="formula-letter normal">Te</span><span class="formula-letter highlight">Am</span><span class="formula-letter normal">Breaking-Devs</span>
+    </div>
+
+    <h1 class="hero-title">
+      <span class="title-line">See you soon</span>
+	  <span class="title-line accent">Rodrigo</span>
+    </h1>
+
+    <p class="hero-subtitle">Una despedida digna de un genio del código</p>
+
+    <div class="divider-chem">
+      <div class="divider-line"></div>
+      <span>💊</span>
+      <div class="divider-line"></div>
+    </div>
+  </section>
+
+  <!-- Quote hero -->
+  <section class="quote-section">
+    <blockquote class="main-quote">
+      <p>"No soy peligroso, Skyler.<br />Yo <em>soy</em> el peligro."</p>
+      <cite>— Walter White, y básicamente tú en cada code review</cite>
+    </blockquote>
+  </section>
+
+  <!-- Story section -->
+  <section class="story-section">
+    <div class="container">
+      <div class="story-header">
+        <h2 class="section-title">El Origen</h2>
+        <div class="episode-tag">Episodio 01 — Pilot</div>
+      </div>
+
+      <div class="story-cards">
+        <div class="story-card" data-animate="fade-left">
+          <div class="card-icon">🧪</div>
+          <h3>Día Uno</h3>
+          <p>Fuiste parte del inicio de un nuevo departamento y proyectos. Como Walter en su primer cook — sin saber que estábamos a punto de cambiar el juego.</p>
+        </div>
+
+        <div class="story-card" data-animate="fade-up">
+          <div class="card-icon">💻</div>
+          <h3>La Fórmula</h3>
+          <p>Encontraste tu pureza. El código más limpio del equipo. 99.1% de calidad — Heisenberg estaría orgulloso.</p>
+        </div>
+
+        <div class="story-card" data-animate="fade-right">
+          <div class="card-icon">🏆</div>
+          <h3>El Imperio</h3>
+          <p>De Developer a Lider. Construiste algo que durar. Como el Blue Sky, tu código corre por las venas del proyecto.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Breaking Bad periodic table name -->
+  <section class="periodic-section">
+    <div class="container">
+      <h2 class="section-title center">Tu Elemento</h2>
+      <p class="section-sub">El equipo que queda en el lab — y el que abre su propio imperio. <br><small>Hover para ver el mensaje de cada uno 👆</small></p>
+
+      <div class="periodic-display">
+
+        <div class="card-flip">
+          <div class="card-flip-inner">
+            <div class="card-front periodic-card animate-glow">
+              <span class="atomic-number">01</span>
+              <span class="element-symbol">Al</span>
+              <span class="element-name">Alex</span>
+              <span class="element-weight">Dev</span>
+            </div>
+            <div class="card-back">
+              <p class="card-back-msg">"Compartimos el inicio de este camino. Fue un honor aprender juntos"</p>
+              <span class="card-back-name">— Alex</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="card-flip">
+          <div class="card-flip-inner">
+            <div class="card-front periodic-card animate-glow">
+              <span class="atomic-number">02</span>
+              <span class="element-symbol">Kv</span>
+              <span class="element-name">Kevin</span>
+              <span class="element-weight">Dev</span>
+            </div>
+            <div class="card-back">
+              <p class="card-back-msg">"Gracias por la ayuda y la paciencia 🙌 Al ser mi primer trabajo aprendí bastante contigo, se valora mucho."</p>
+              <span class="card-back-name">— Kevin</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="card-flip">
+          <div class="card-flip-inner">
+            <div class="card-front periodic-card animate-glow">
+              <span class="atomic-number">03</span>
+              <span class="element-symbol">Ln</span>
+              <span class="element-name">Alan</span>
+              <span class="element-weight">Dev</span>
+            </div>
+            <div class="card-back card-back-photo">
+              <img src="/Sergio.jpeg" alt="Sergio" class="card-photo" />
+              <p class="card-back-msg">"Gracias por los mejores caseros."</p>
+              <span class="card-back-name">— Alan</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="card-flip">
+          <div class="card-flip-inner">
+            <div class="card-front periodic-card animate-glow">
+              <span class="atomic-number">04</span>
+              <span class="element-symbol">Le</span>
+              <span class="element-name">Lee</span>
+              <span class="element-weight">Dev</span>
+            </div>
+            <div class="card-back">
+              <p class="card-back-msg">"Te deseo lo mejor en esta nueva aventura, que te baya bien."</p>
+              <span class="card-back-name">— Lee</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="card-flip card-flip-farewell">
+          <div class="card-flip-inner">
+            <div class="card-front periodic-card periodic-farewell animate-glow" style="--glow-color: #f5c518;">
+              <span class="atomic-number">99</span>
+              <span class="element-symbol">Ro</span>
+              <span class="element-name">Rodrigo</span>
+              <span class="element-weight">Legend ✦</span>
+            </div>
+            <div class="card-back card-back-farewell">
+              <p class="card-back-msg">"Sabes o no sabes. Y vos siempre supiste. Gracias por todo."</p>
+              <span class="card-back-name">— El Equipo 🧪</span>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- Skills / Los Cook -->
+  <section class="skills-section">
+    <div class="container">
+      <h2 class="section-title center">Lo que dejás en el lab</h2>
+      <div class="skills-grid">
+        <div class="skill-item">
+          <span class="skill-name">Calidad de Código</span>
+          <div class="skill-bar-bg">
+            <div class="skill-bar" style="--target: 95%"></div>
+          </div>
+          <span class="skill-purity">99.1% Purity</span>
+        </div>
+        <div class="skill-item">
+          <span class="skill-name">Debugging</span>
+          <div class="skill-bar-bg">
+            <div class="skill-bar" style="--target: 90%"></div>
+          </div>
+          <span class="skill-purity">El Heisenberg del bug</span>
+        </div>
+        <div class="skill-item">
+          <span class="skill-name">Code Reviews</span>
+          <div class="skill-bar-bg">
+            <div class="skill-bar" style="--target: 88%"></div>
+          </div>
+          <span class="skill-purity">Sin piedad ni indulgencia</span>
+        </div>
+        <div class="skill-item">
+          <span class="skill-name">Compañerismo</span>
+          <div class="skill-bar-bg">
+            <div class="skill-bar" style="--target: 100%"></div>
+          </div>
+          <span class="skill-purity">Off the charts</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Quotes wall -->
+  <section class="quotes-wall">
+    <div class="container">
+      <h2 class="section-title center">Lo que siempre dijiste</h2>
+      <div class="quotes-grid">
+        <div class="mini-quote highlight-quote">"Sabes o no sabes."</div>
+		<div class="mini-quote highlight-quote">"Te deje comentarios, revisa tu PR"</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Farewell -->
+  <section class="farewell-section">
+    <div class="container">
+      <div class="farewell-content">
+        <div class="rip-badge">FIN DE TEMPORADA</div>
+        <h2 class="farewell-title">Todo llega a su<br /><span>Final de Capítulo</span></h2>
+        <div class="farewell-signature">
+          <div class="signature-line"></div>
+          <p class="signature-text">— Tu equipo de desarrollo de Shema</p>
+          <div class="signature-line"></div>
+        </div>
+
+        <div class="final-quote-box">
+          <p>"I am the one who codes."</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <p class="footer-text">
+      <span class="footer-formula">Te<span class="footer-highlight">Am</span>Breaking-Devs</span>
+      — Cooked with love &amp; caffeine
+    </p>
+    <p class="footer-sub">2026 · Una temporada que no olvidaremos</p>
+  </footer>
+
+</Layout>
+
+<style>
+  /* ============ SMOKE ============ */
+  .smoke-container {
+    position: fixed;
+    inset: 0;
+    pointer-events: none;
+    z-index: 0;
+    overflow: hidden;
+  }
+
+  .smoke-particle {
+    position: absolute;
+    bottom: -100px;
+    left: var(--x);
+    width: var(--size);
+    height: var(--size);
+    background: radial-gradient(circle, rgba(100, 180, 100, 0.12) 0%, transparent 70%);
+    border-radius: 50%;
+    animation: floatUp var(--duration) var(--delay) infinite ease-in-out;
+    filter: blur(8px);
+  }
+
+  @keyframes floatUp {
+    0% { transform: translateY(0) scale(1); opacity: 0; }
+    20% { opacity: 1; }
+    80% { opacity: 0.4; }
+    100% { transform: translateY(-110vh) scale(2.5) rotate(30deg); opacity: 0; }
+  }
+
+  /* ============ HERO ============ */
+  .hero {
+    position: relative;
+    z-index: 1;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 2rem;
+    background: radial-gradient(ellipse at center, #0f1f0f 0%, #0a0a0a 70%);
+  }
+
+  .hero-badge {
+    font-family: 'Special Elite', cursive;
+    font-size: 0.75rem;
+    letter-spacing: 0.4em;
+    color: #f5c518;
+    border: 1px solid #f5c518;
+    padding: 0.4rem 1.2rem;
+    margin-bottom: 2rem;
+    animation: fadeInDown 1s ease forwards;
+    opacity: 0;
+    animation-delay: 0.2s;
+  }
+
+  .formula-container {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: clamp(1rem, 3vw, 1.6rem);
+    letter-spacing: 0.15em;
+    margin-bottom: 1.5rem;
+    animation: fadeInDown 1s ease forwards;
+    opacity: 0;
+    animation-delay: 0.4s;
+  }
+
+  .formula-letter.highlight {
+    color: #f5c518;
+    text-shadow: 0 0 20px rgba(245, 197, 24, 0.6);
+  }
+
+  .formula-letter.normal {
+    color: #e8e0c8;
+  }
+
+  .hero-title {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: clamp(5rem, 18vw, 14rem);
+    line-height: 0.9;
+    letter-spacing: 0.02em;
+    animation: fadeInUp 1s ease forwards;
+    opacity: 0;
+    animation-delay: 0.6s;
+  }
+
+  .title-line {
+    display: block;
+    color: #e8e0c8;
+    text-shadow: 4px 4px 0px rgba(0,0,0,0.5);
+  }
+
+  .title-line.accent {
+    color: #f5c518;
+    text-shadow: 0 0 40px rgba(245, 197, 24, 0.4), 4px 4px 0px rgba(0,0,0,0.5);
+  }
+
+  .hero-subtitle {
+    font-size: clamp(1rem, 2.5vw, 1.3rem);
+    color: rgba(232, 224, 200, 0.7);
+    font-weight: 300;
+    letter-spacing: 0.15em;
+    margin-top: 1.5rem;
+    animation: fadeInUp 1s ease forwards;
+    opacity: 0;
+    animation-delay: 0.9s;
+  }
+
+  .divider-chem {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    margin-top: 3rem;
+    animation: fadeInUp 1s ease forwards;
+    opacity: 0;
+    animation-delay: 1.1s;
+  }
+
+  .divider-line {
+    width: 80px;
+    height: 1px;
+    background: linear-gradient(90deg, transparent, #f5c518, transparent);
+  }
+
+  /* ============ QUOTE ============ */
+  .quote-section {
+    position: relative;
+    z-index: 1;
+    padding: 5rem 2rem;
+    background: #1a4a2e;
+    clip-path: polygon(0 5%, 100% 0, 100% 95%, 0 100%);
+  }
+
+  .main-quote {
+    max-width: 700px;
+    margin: 0 auto;
+    text-align: center;
+  }
+
+  .main-quote p {
+    font-family: 'Special Elite', cursive;
+    font-size: clamp(1.4rem, 4vw, 2.2rem);
+    line-height: 1.5;
+    color: #e8e0c8;
+    margin-bottom: 1.5rem;
+  }
+
+  .main-quote em {
+    color: #f5c518;
+    font-style: normal;
+  }
+
+  .main-quote cite {
+    font-size: 0.9rem;
+    color: rgba(232, 224, 200, 0.5);
+    letter-spacing: 0.05em;
+    font-style: normal;
+  }
+
+  /* ============ STORY ============ */
+  .story-section {
+    position: relative;
+    z-index: 1;
+    padding: 6rem 2rem;
+  }
+
+  .container {
+    max-width: 1100px;
+    margin: 0 auto;
+  }
+
+  .story-header {
+    display: flex;
+    align-items: baseline;
+    gap: 1.5rem;
+    margin-bottom: 3rem;
+  }
+
+  .section-title {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: clamp(2.5rem, 6vw, 4rem);
+    color: #f5c518;
+    letter-spacing: 0.05em;
+  }
+
+  .section-title.center {
+    text-align: center;
+    margin-bottom: 1rem;
+  }
+
+  .section-sub {
+    text-align: center;
+    color: rgba(232, 224, 200, 0.6);
+    margin-bottom: 3rem;
+    font-weight: 300;
+  }
+
+  .episode-tag {
+    font-size: 0.8rem;
+    color: #3d9970;
+    letter-spacing: 0.2em;
+    border-left: 2px solid #3d9970;
+    padding-left: 0.8rem;
+  }
+
+  .story-cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 2rem;
+  }
+
+  .story-card {
+    background: rgba(255,255,255,0.03);
+    border: 1px solid rgba(245, 197, 24, 0.15);
+    border-top: 3px solid #f5c518;
+    padding: 2rem;
+    transition: transform 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease;
+    opacity: 0;
+    transform: translateY(30px);
+  }
+
+  .story-card.visible {
+    opacity: 1;
+    transform: translateY(0);
+    transition: opacity 0.6s ease, transform 0.6s ease, border-color 0.3s ease, box-shadow 0.3s ease;
+  }
+
+  .story-card:hover {
+    transform: translateY(-8px);
+    border-color: rgba(245, 197, 24, 0.5);
+    box-shadow: 0 20px 40px rgba(0,0,0,0.4), 0 0 20px rgba(245, 197, 24, 0.1);
+  }
+
+  .card-icon {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+  }
+
+  .story-card h3 {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 1.8rem;
+    color: #f5c518;
+    margin-bottom: 0.8rem;
+    letter-spacing: 0.05em;
+  }
+
+  .story-card p {
+    color: rgba(232, 224, 200, 0.7);
+    line-height: 1.7;
+    font-weight: 300;
+    font-size: 0.95rem;
+  }
+
+  /* ============ PERIODIC ============ */
+  .periodic-section {
+    position: relative;
+    z-index: 1;
+    padding: 6rem 2rem;
+    background: radial-gradient(ellipse at center, #0f1f0f 0%, #0a0a0a 100%);
+  }
+
+  .periodic-display {
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+    gap: 1.5rem;
+    margin-top: 3rem;
+    flex-wrap: wrap;
+  }
+
+  .periodic-card {
+    --glow-color: #3d9970;
+    width: 120px;
+    height: 130px;
+    border: 2px solid var(--glow-color);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 0.5rem;
+    position: relative;
+    animation: periodicPulse 3s infinite;
+  }
+
+  @keyframes periodicPulse {
+    0%, 100% { box-shadow: 0 0 10px var(--glow-color); }
+    50% { box-shadow: 0 0 30px var(--glow-color), 0 0 60px color-mix(in srgb, var(--glow-color) 30%, transparent); }
+  }
+
+  .atomic-number {
+    position: absolute;
+    top: 6px;
+    left: 8px;
+    font-size: 0.7rem;
+    color: rgba(232,224,200,0.5);
+  }
+
+  .element-symbol {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 3.5rem;
+    color: #e8e0c8;
+    line-height: 1;
+  }
+
+  .element-name {
+    font-size: 0.75rem;
+    letter-spacing: 0.15em;
+    color: rgba(232,224,200,0.7);
+    margin-top: 0.2rem;
+  }
+
+  .element-weight {
+    font-size: 0.65rem;
+    color: rgba(232,224,200,0.4);
+    margin-top: 0.1rem;
+  }
+
+  .plus-sign {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 3rem;
+    color: #f5c518;
+  }
+
+  /* ============ FLIP CARD ============ */
+  .card-flip {
+    perspective: 800px;
+    width: 155px;
+    height: 180px;
+  }
+
+  .card-flip-farewell {
+    width: 175px;
+    height: 200px;
+  }
+
+  .card-flip-inner {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    transform-style: preserve-3d;
+    transition: transform 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+    cursor: pointer;
+  }
+
+  .card-flip:hover .card-flip-inner,
+  .card-flip.flipped .card-flip-inner {
+    transform: rotateY(180deg);
+  }
+
+  .card-front,
+  .card-back {
+    position: absolute;
+    inset: 0;
+    backface-visibility: hidden;
+    -webkit-backface-visibility: hidden;
+  }
+
+  .card-front.periodic-card {
+    width: 100%;
+    height: 100%;
+  }
+
+  .card-back {
+    background: #0f1f0f;
+    border: 2px solid #3d9970;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 0.8rem;
+    transform: rotateY(180deg);
+    text-align: center;
+  }
+
+  .card-back-farewell {
+    border-color: #f5c518;
+  }
+
+  .card-back-msg {
+    font-family: 'Special Elite', cursive;
+    font-size: 0.72rem;
+    line-height: 1.6;
+    color: rgba(232, 224, 200, 0.85);
+    margin-bottom: 0.6rem;
+  }
+
+  .card-back-name {
+    font-size: 0.65rem;
+    letter-spacing: 0.1em;
+    color: #3d9970;
+  }
+
+  .card-back-farewell .card-back-name {
+    color: #f5c518;
+  }
+
+  .card-back-photo {
+    padding: 0.4rem;
+    gap: 0.3rem;
+  }
+
+  .card-photo {
+    width: 100%;
+    height: 95px;
+    object-fit: cover;
+    object-position: center top;
+    border-bottom: 1px solid rgba(61, 153, 112, 0.4);
+    margin-bottom: 0.3rem;
+  }
+
+  /* ============ SKILLS ============ */
+  .skills-section {
+    position: relative;
+    z-index: 1;
+    padding: 6rem 2rem;
+    background: rgba(0, 0, 0, 0.5);
+  }
+
+  .skills-grid {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    max-width: 700px;
+    margin: 0 auto;
+  }
+
+  .skill-item {
+    opacity: 0;
+    transform: translateX(-20px);
+  }
+
+  .skill-item.visible {
+    opacity: 1;
+    transform: translateX(0);
+    transition: opacity 0.5s ease, transform 0.5s ease;
+  }
+
+  .skill-name {
+    display: block;
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 1.3rem;
+    letter-spacing: 0.1em;
+    margin-bottom: 0.5rem;
+    color: #e8e0c8;
+  }
+
+  .skill-bar-bg {
+    background: rgba(255,255,255,0.05);
+    height: 8px;
+    border-radius: 4px;
+    overflow: hidden;
+    border: 1px solid rgba(255,255,255,0.1);
+  }
+
+  .skill-bar {
+    height: 100%;
+    width: 0;
+    background: linear-gradient(90deg, #3d9970, #f5c518);
+    border-radius: 4px;
+    transition: width 1.5s cubic-bezier(0.22, 1, 0.36, 1);
+    box-shadow: 0 0 10px rgba(245, 197, 24, 0.4);
+  }
+
+  .skill-item.visible .skill-bar {
+    width: var(--target);
+  }
+
+  .skill-purity {
+    display: block;
+    font-size: 0.75rem;
+    color: #3d9970;
+    letter-spacing: 0.1em;
+    margin-top: 0.4rem;
+  }
+
+  /* ============ QUOTES WALL ============ */
+  .quotes-wall {
+    position: relative;
+    z-index: 1;
+    padding: 6rem 2rem;
+    background: #1a4a2e;
+    clip-path: polygon(0 3%, 100% 0, 100% 97%, 0 100%);
+  }
+
+  .quotes-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    gap: 1.5rem;
+    margin-top: 3rem;
+  }
+
+  .mini-quote {
+    background: rgba(0,0,0,0.3);
+    border-left: 3px solid rgba(232, 224, 200, 0.2);
+    padding: 1.2rem 1.5rem;
+    font-family: 'Special Elite', cursive;
+    font-size: 0.95rem;
+    color: rgba(232, 224, 200, 0.7);
+    transition: transform 0.2s ease, border-color 0.2s ease;
+  }
+
+  .mini-quote:hover {
+    transform: scale(1.03);
+    border-color: #3d9970;
+    color: #e8e0c8;
+  }
+
+  .mini-quote.highlight-quote {
+    border-left-color: #f5c518;
+    color: #e8e0c8;
+  }
+
+  /* ============ FAREWELL ============ */
+  .farewell-section {
+    position: relative;
+    z-index: 1;
+    padding: 8rem 2rem;
+    text-align: center;
+    background: radial-gradient(ellipse at center bottom, #0f2210 0%, #0a0a0a 70%);
+  }
+
+  .farewell-content {
+    max-width: 700px;
+    margin: 0 auto;
+  }
+
+  .rip-badge {
+    display: inline-block;
+    font-size: 0.7rem;
+    letter-spacing: 0.5em;
+    color: #8b3a0f;
+    border: 1px solid #8b3a0f;
+    padding: 0.4rem 1.2rem;
+    margin-bottom: 2rem;
+  }
+
+  .farewell-title {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: clamp(3rem, 8vw, 5.5rem);
+    line-height: 1;
+    margin-bottom: 2rem;
+    letter-spacing: 0.03em;
+  }
+
+  .farewell-title span {
+    display: block;
+    color: #f5c518;
+    text-shadow: 0 0 30px rgba(245, 197, 24, 0.3);
+  }
+
+  .farewell-text {
+    font-size: 1.05rem;
+    line-height: 1.9;
+    color: rgba(232, 224, 200, 0.75);
+    font-weight: 300;
+    margin-bottom: 3rem;
+  }
+
+  .farewell-signature {
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+    margin-bottom: 3rem;
+  }
+
+  .signature-line {
+    flex: 1;
+    height: 1px;
+    background: rgba(232, 224, 200, 0.2);
+  }
+
+  .signature-text {
+    font-family: 'Special Elite', cursive;
+    font-size: 0.9rem;
+    color: rgba(232, 224, 200, 0.5);
+    white-space: nowrap;
+  }
+
+  .final-quote-box {
+    border: 1px solid #f5c518;
+    padding: 1.5rem 2rem;
+    display: inline-block;
+    animation: glowPulse 2.5s infinite;
+  }
+
+  .final-quote-box p {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: clamp(1.5rem, 4vw, 2.5rem);
+    color: #f5c518;
+    letter-spacing: 0.1em;
+  }
+
+  @keyframes glowPulse {
+    0%, 100% { box-shadow: 0 0 10px rgba(245, 197, 24, 0.2); }
+    50% { box-shadow: 0 0 30px rgba(245, 197, 24, 0.5), 0 0 60px rgba(245, 197, 24, 0.2); }
+  }
+
+  /* ============ FOOTER ============ */
+  .footer {
+    position: relative;
+    z-index: 1;
+    padding: 2rem;
+    text-align: center;
+    border-top: 1px solid rgba(255,255,255,0.05);
+  }
+
+  .footer-text {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 1.1rem;
+    letter-spacing: 0.15em;
+    color: rgba(232, 224, 200, 0.6);
+    margin-bottom: 0.5rem;
+  }
+
+  .footer-formula {
+    color: #e8e0c8;
+  }
+
+  .footer-highlight {
+    color: #f5c518;
+  }
+
+  .footer-sub {
+    font-size: 0.75rem;
+    color: rgba(232, 224, 200, 0.3);
+    letter-spacing: 0.1em;
+  }
+
+  /* ============ KEYFRAMES ============ */
+  @keyframes fadeInDown {
+    from { opacity: 0; transform: translateY(-20px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+
+  @keyframes fadeInUp {
+    from { opacity: 0; transform: translateY(30px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+</style>
+
+<script>
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach((entry) => {
+      if (entry.isIntersecting) {
+        const el = entry.target as HTMLElement;
+        const idx = parseInt(el.dataset.index || '0');
+        setTimeout(() => el.classList.add('visible'), idx * 150);
+        observer.unobserve(el);
+      }
+    });
+  }, { threshold: 0.15 });
+
+  document.querySelectorAll('.story-card, .skill-item').forEach((el, i) => {
+    (el as HTMLElement).dataset.index = String(i);
+    observer.observe(el);
+  });
+
+  // Touch support for flip cards
+  document.querySelectorAll('.card-flip').forEach((card) => {
+    card.addEventListener('click', () => {
+      card.classList.toggle('flipped');
+    });
+  });
+
+  const heroTitle = document.querySelector('.hero-title') as HTMLElement;
+  if (heroTitle) {
+    window.addEventListener('scroll', () => {
+      const scroll = window.scrollY;
+      heroTitle.style.transform = `translateY(${scroll * 0.3}px)`;
+      heroTitle.style.opacity = String(Math.max(0, 1 - scroll / 600));
+    }, { passive: true });
+  }
+</script>
